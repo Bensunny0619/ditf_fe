@@ -1,56 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="fonts/basier/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Home</title>
 </head>
-<body class="bg-background-white"></body>
 
-    
+<body class="bg-background-white">
     <!-- HEADER -->
-    <nav class="bg-pastel-purple p-5 ">
-        <div class="container flex justify-start items-center mx-40">
-          <a href="">
-              <div class="self-center font-bold tracking-tighter text-xl text-main-black"><p>Dorcas Adamu Child<br> Dignity in trying foundation</p></div>
-          </a>
-        
-          <div class="ml-12">
-            <ul class="flex justify-start">
-              <li>
-                <a href="#" class="block text-base px-5 text-main-black font-semibold">Home</a>
-              </li>
-              <li>
-                <a href="#" class="block text-base px-5 text-main-black font-semibold">Donation</a>
-              </li>
-              <li>
-                <a href="#" class="block text-base px-5 text-main-black font-semibold">Gallery</a>
-              </li>
-              <li>
-                <a href="#" class="block text-base px-5 text-main-black font-semibold">Contact Us</a>
-              </li>
-              <li>
-                <a href="#" class="block text-base px-5 text-main-black font-semibold">Blog</a>
-              </li>
-             
-             
+    <section>
+        <nav id="nav_bar" class="bg-pastel-purple max-w-full p-4 md:p-3 lg:p-5">
+            <div class="container flex justify-between md:justify-start lg:px-12 xl:px-24 md:items-center">
+                <a href="index.html">
+                    <div
+                        class="self-center font-bold tracking-tighter hover:tracking-tight pl-4 md:pl-12 text-xs lg:text-base xl:text-xl text-main-black">
+                        <p>
+                            Dorcas Adamu Child<br />
+                            Dignity in trying foundation
+                        </p>
+                    </div>
+                </a>
+
+                <!-- MAIN MENU -->
+                <div class="hidden md:flex ml-8 lg:ml-12">
+                    <ul class="flex justify-start">
+                        <li>
+                            <a href="index.html"
+                                class="block text-xs hover:tracking-tight md:tracking-tighter lg:text-base md:px-2 lg:px-3 xl:px-5 text-main-black font-semibold">Home</a>
+                        </li>
+                        <li>
+                            <a href="donate.html"
+                                class="block text-xs hover:tracking-tight md:tracking-tighter lg:text-base md:px-2 lg:px-3 xl:px-5 text-main-black font-semibold">Donation</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html"
+                                class="block text-xs hover:tracking-tight md:tracking-tighter lg:text-base md:px-2 lg:px-3 xl:px-5 text-main-black font-semibold">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="contact.html"
+                                class="block text-xs hover:tracking-tight md:tracking-tighter lg:text-base md:px-2 lg:px-3 xl:px-5 text-main-black font-semibold">Contact
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="blog.html"
+                                class="block text-xs hover:tracking-tight md:tracking-tighter lg:text-base md:px-2 lg:px-3 xl:px-5 text-main-black font-semibold">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- /MAIN MENU -->
+
+                <!-- HAMBURGER -->
+                <div class="">
+                    <span class="mt-2 cursor-pointer md:hidden" id="menu-toggle-button">
+                        <svg class="w-5 h-6 hover:w-4" fill="red" stroke="#334155" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </span>
+                </div>
+                <!-- /HAMBURGER -->
+            </div>
+        </nav>
+
+        <!-- DROPDOWN MENU -->
+
+        <div class="flex-col items-start hidden transition-all ease-in-out delay-500 duration-700" id="mobile-menu">
+            <ul class="flex-col p-5 bg-pastel-purple opacity-50 hover:opacity-70 rounded-md border">
+                <li>
+                    <a href="index.html"
+                        class="block hover:font-bold py-2 pr-5 pl-0 mr-3 text-main-black text-sm">Home</a>
+                </li>
+                <li>
+                    <a href="donate.html"
+                        class="block hover:font-bold py-2 pr-5 pl-0 mr-3 text-main-black text-sm">Donation</a>
+                </li>
+                <li>
+                    <a href="gallery.html"
+                        class="block hover:font-bold py-2 pr-5 pl-0 mr-3 text-main-black text-sm">Gallery</a>
+                </li>
+                <li>
+                    <a href="contact.html"
+                        class="block hover:font-bold py-2 pr-5 pl-0 mr-3 text-main-black text-sm">Contact Us</a>
+                </li>
+                <li>
+                    <a href="blog.html"
+                        class="block hover:font-bold py-2 pr-5 pl-0 mr-3 text-main-black text-sm">Blog</a>
+                </li>
             </ul>
-          </div>
         </div>
-      </nav>
-   
-   
-   
-   
-   
-   
-        <div>
-        
-    </div>    
+
+        <!-- /DROPDOWN MENU -->
+    </section>
+
+    <!-- /HEADER -->
+
+
+
+
+
+    <!-- HERO PAGE  -->
+    <section>
+        <div class="">
+
+            <div class="">
+                <img class="" src="assets/hero1.jpg" alt="little african kids" />
+                <div
+                    class="flex-col justify-center align-middle bottom-28 md:bottom-60 lg:bottom-80 xl:bottom-96 text-center relative z-50 font-semibold text-white">
+                    <h1 class="md:text-2xl lg:text-5xl xl:text-7xl text-base">
+                        J<span class="text-xs md:text-lg lg:text-4xl xl:text-5xl">❤</span>in hands to<br> save the
+                        environment
+                    </h1>
+                    <p class="hidden md:block mt-8 tracking-tighter text-xs lg:text-sm xl:text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                        Turpis tempor, hac vitae pellentesque porttitor morbi<br>
+                        maecenas. Natoque enim tortor, egestas ut orci.
+                    </p>
+                    <button
+                        class="text-xs text-center hover:bg-main-black hover:opacity-75 hover:text-pastel-purple mt-4 md:mt-6 tracking-tighter
+                         rounded-md bg-pastel-purple px-2 py-1.5 md:p-2 lg:p-3 xl:p-4 font-bold text-main-black sm:text-lg lg:text-2xl">Get
+                        Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /HERO PAGE  -->
+
+
+
+
+
+
+
+
+    <!-- WELCOME SECTION -->
+    <section>
+        <div
+            class="flex flex-col rounded-lg border relative bottom-12 md:bottom-28 lg:bottom-48 xl:bottom-56 shadow-md md:flex-row md:w-fit mx-8 md:mx-12 lg:mx-20 xl:mx-64">
+            <div class="md:flex-col bg-pastel-purple pt-8 pb-6 text-main-black md:h-80 lg:h-96 lg:pt-16 flex flex-col basis-1/2 
+                    justify-between p-6 lg:p-8  hover:bg-purple-300">
+
+                <p
+                    class="text-center md:text-left mb-4 md:mb-4 lg:mb-6 text-xs xl:text-sm xl:tracking-tighter tracking-tighter lg:tracking-normal font-normal">
+                    Welcome to Dorcas
+                    Adamu Child
+                    Dignity
+                    in trying
+                    Foundation</p>
+                <p class="text-xs md:hidden text-center mb-4 md:mb-8 font-semibold">We believe with you we can save more
+                    lives
+                </p>
+                <p class="hidden md:block text-lg lg:text-2xl xl:text-3xl mb-5 lg:mb-10 font-semibold">We believe with
+                    you <br>we
+                    can
+                    save
+                    more lives</p>
+                <p class="text-xs lg:text-base tracking-tighter text-center md:text-left mb-6 font-normal">Lorem ipsum
+                    dolor sit amet,
+                    consectetur
+                    adipiscing elit.
+                    Pulvinar vitae enim egestas arcu suspendisse bibendum aliquam nibh.
+                    Aliquet elementum consequat vitae quisque.</p>
+                <p class="text-xs lg:text-base xl:tracking-wide flex mb-4 font-medium">Let’s get you started
+                    <span class="flex-row lg:relative lg:top-0.5 px-2 hover:opacity-75">
+                        <a href="#">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.3225 4.94751L15.875 9.50001L11.3225 14.0525" fill="#383E66" />
+                                <path d="M11.3225 4.94751L15.875 9.50001L11.3225 14.0525" stroke="#383E66"
+                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3.125 9.5H15.7475" stroke="#383E66" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </span>
+                </p>
+            </div>
+
+            <div>
+                <img class="hidden w-full md:h-80 lg:h-96 basis-1/2 xl:min-w-max rounded-t-lg  md:rounded-none md:rounded-r-lg md:block"
+                    src="assets/hero2.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- /WELCOME SECTION -->
+
+
+
+
+
+
+
+    <!-- OUR CAUSE SECTION -->
+    <section class="bg-pastel-purple px-8 pb-8">
+        <div class="text-center text-main-black pt-16 pb-2 md:pb-12 lg:pb-16">
+            <p class="text-xs md:text-lg lg:text-xl xl:text-2xl pb-8 font-normal">Our Causes</p>
+
+            <h1 class="text-lg md:text-3xl lg:text-5xl xl:text-6xl font-semibold">Rebuilding lives for the future</h1>
+        </div>
+
+
+        <div class="md:grid md:grid-cols-2 md:px-8 lg:px-24 xl:px-40 gap-2">
+            <!-- CARD 1 -->
+            <div class="max-w-lg bg-purple-300 my-8 md:my-0 rounded-lg border border-gray-200 shadow-md">
+                <a href="#">
+                    <img class="rounded-t-lg" src="assets/card1.jpg" alt="">
+                </a>
+                <div class="p-5 text-main-black">
+                    <p class="mb-3 md:mb-4 text-xs md:text-sm xl:text-base font-normal tracking-tight">
+                        Education
+                    </p>
+
+                    <h1 class="mb-5 md:mb-6 text-sm md:text-lg xl:text-2xl tracking-tighter font-semibold">
+                        Re construction of Lorem Ipsum
+                    </h1>
+                    <p class="mb-5 md:mb-6 text-xs md:text-base lg:text-lg xl:text-xl tracking-tighter font-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus feugiat pretium nibh velit sed
+                        donec
+                        at habitasse lectus. Enim purus eget scelerisque in pulvinar eget.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center py-2 px-3 lg:py-3 lg:px-4 xl:py-4 xl:px-4 tracking-tighter text-xs md:text-base lg:text-lg xl:text-xl font-medium text-center text-white bg-main-black rounded-lg hover:opacity-80">
+                        Donate Now
+                        <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- /CARD 1 -->
+
+
+            <!-- CARD 2 -->
+            <div class="max-w-lg bg-purple-300 my-8 md:my-0 rounded-lg border border-gray-200 shadow-md">
+                <a href="#">
+                    <img class="rounded-t-lg" src="assets/card2.jpg" alt="">
+                </a>
+                <div class="p-5 text-main-black">
+                    <p class="mb-3 md:mb-4 text-xs md:text-sm xl:text-base font-normal tracking-tight">
+                        Agriculture
+                    </p>
+
+                    <h1 class="mb-5 md:mb-6 text-sm md:text-lg xl:text-2xl tracking-tighter font-semibold">
+                        Re construction of Lorem Ipsum
+                    </h1>
+                    <p class="mb-5 md:mb-6 text-xs md:text-base lg:text-lg xl:text-xl tracking-tighter font-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus feugiat pretium nibh velit sed
+                        donec
+                        at habitasse lectus. Enim purus eget scelerisque in pulvinar eget.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center py-2 px-3 lg:py-3 lg:px-4 xl:py-4 xl:px-4 tracking-tighter text-xs md:text-base lg:text-lg xl:text-xl font-medium text-center text-white bg-main-black rounded-lg hover:opacity-80">
+                        Donate Now
+                        <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- /CARD 2 -->
+
+
+            <!-- CARD 3 -->
+            <div class="max-w-lg bg-purple-100 my-8 md:my-0 rounded-lg border border-gray-200 shadow-md">
+                <a href="#">
+                    <img class="rounded-t-lg" src="assets/card3.jpg" alt="">
+                </a>
+                <div class="p-5 text-main-black">
+                    <p class="mb-3 md:mb-4 text-xs md:text-sm xl:text-base font-normal tracking-tight">
+                        Medical
+                    </p>
+
+                    <h1 class="mb-5 md:mb-6 text-sm md:text-lg xl:text-2xl tracking-tighter font-semibold">
+                        Re construction of Lorem Ipsum
+                    </h1>
+                    <p class="mb-5 md:mb-6 text-xs md:text-base lg:text-lg xl:text-xl tracking-tighter font-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus feugiat pretium nibh velit sed
+                        donec
+                        at habitasse lectus. Enim purus eget scelerisque in pulvinar eget.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center py-2 px-3 lg:py-3 lg:px-4 xl:py-4 xl:px-4 tracking-tighter text-xs md:text-base lg:text-lg xl:text-xl font-medium text-center text-white bg-main-black rounded-lg hover:opacity-80">
+                        Donate Now
+                        <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- /CARD 3 -->
+
+
+            <!-- CARD 4 -->
+            <div class="max-w-lg bg-purple-100 my-8 md:my-0 rounded-lg border border-gray-200 shadow-md">
+                <a href="#">
+                    <img class="rounded-t-lg" src="assets/card4.jpg" alt="">
+                </a>
+                <div class="p-5 text-main-black">
+                    <p class="mb-3 md:mb-4 text-xs md:text-sm xl:text-base font-normal tracking-tight">
+                        Food
+                    </p>
+
+                    <h1 class="mb-5 md:mb-6 text-sm md:text-lg xl:text-2xl tracking-tighter font-semibold">
+                        Re construction of Lorem Ipsum
+                    </h1>
+                    <p class="mb-5 md:mb-6 text-xs md:text-base lg:text-lg xl:text-xl tracking-tighter font-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus feugiat pretium nibh velit sed
+                        donec
+                        at habitasse lectus. Enim purus eget scelerisque in pulvinar eget.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center py-2 px-3 lg:py-3 lg:px-4 xl:py-4 xl:px-4 tracking-tighter text-xs md:text-base lg:text-lg xl:text-xl font-medium text-center text-white bg-main-black rounded-lg hover:opacity-80">
+                        Donate Now
+                        <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- /CARD 4 -->
+
+        </div>
+
+
+    </section>
+    <!-- /OUR CAUSE SECTION -->
+
+
+
+    <!-- BLOG SECTION -->
+    <section class="bg-purple-300 px-8 pb-8 mt-20 md:mt-28 lg:mt-40">
+        <div class="text-center text-main-black pt-16 pb-2 md:pb-12 lg:pb-20">
+            <p class="text-xs md:text-lg lg:text-xl xl:text-2xl pb-8 font-normal">Blog</p>
+
+            <h1 class="text-lg md:text-2xl lg:text-4xl xl:text-5xl tracking-tighter font-semibold">Check out our latest
+                news and Insights
+            </h1>
+        </div>
+
+
+        <div class="md:grid md:grid-cols-2 md:px-8 lg:px-24 xl:px-40 gap-2">
+            <!-- BLOG CARD 1 -->
+            <div class="max-w-lg bg-main-yellow my-8 md:my-0 rounded-lg border border-gray-200 shadow-md">
+                <a href="#">
+                    <img class="rounded-t-lg" src="assets/blogcard1.jpg" alt="">
+                </a>
+                <div class="p-5 text-main-black">
+                    <p class="mb-3 md:mb-6 text-xs md:text-sm xl:text-base font-semibold tracking-tight">
+                        Siemens Energy, EAE, NCDMB retrain Bayelsa teachers
+                    </p>
+
+                    <p class="mb-5 md:mb-6 text-xs md:text-base lg:text-lg xl:text-xl tracking-tighter font-normal">
+                        Nigerian Content Development and Monitoring Board (NCDMB), Empowering Africans Through Education
+                        Initiative (EAE),
+                        Siemens Stiftung and Siemens
+                    </p>
+                    <p class="text-xs md:text-base lg:text-xl xl:tracking-wide flex mb-5 hover:bold font-semibold">Read
+                        more
+                        <span class="flex-row lg:relative lg:top-1 px-2 hover:opacity-75">
+                            <a href="#">
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.3225 4.94751L15.875 9.50001L11.3225 14.0525" fill="#383E66" />
+                                    <path d="M11.3225 4.94751L15.875 9.50001L11.3225 14.0525" stroke="#383E66"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M3.125 9.5H15.7475" stroke="#383E66" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <!-- /BLOG CARD 1 -->
+
+
+            <!-- BLOG CARD 2 -->
+            <div class="max-w-lg bg-main-yellow my-8 md:my-0 rounded-lg border border-gray-200 shadow-md">
+                <a href="#">
+                    <img class="rounded-t-lg" src="assets/blogcard2.jpg" alt="">
+                </a>
+                <div class="p-5 text-main-black">
+                    <p class="mb-3 md:mb-6 text-xs md:text-sm xl:text-base font-semibold tracking-tight">
+                        Siemens Energy, EAE, NCDMB retrain Bayelsa teachers
+                    </p>
+
+                    <p class="mb-5 md:mb-6 text-xs md:text-base lg:text-lg xl:text-xl tracking-tighter font-normal">
+                        Nigerian Content Development and Monitoring Board (NCDMB), Empowering Africans Through Education
+                        Initiative (EAE),
+                        Siemens Stiftung and Siemens
+                    </p>
+                    <p class="text-xs md:text-base lg:text-xl xl:tracking-wide flex mb-5 hover:bold font-semibold">Read
+                        more
+                        <span class="flex-row lg:relative lg:top-1 px-2 hover:opacity-75">
+                            <a href="#">
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.3225 4.94751L15.875 9.50001L11.3225 14.0525" fill="#383E66" />
+                                    <path d="M11.3225 4.94751L15.875 9.50001L11.3225 14.0525" stroke="#383E66"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M3.125 9.5H15.7475" stroke="#383E66" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <!-- /BLOG CARD 2 -->
+            <p
+                class="text-xs md:text-base lg:text-xl xl:tracking-wide flex pt-2 md:pt-12 xl:pt-16 hover:bold font-semibold">
+                View
+                all
+                <span class="flex-row lg:relative lg:top-1 px-2 hover:opacity-75">
+                    <a href="#">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.3225 4.94751L15.875 9.50001L11.3225 14.0525" fill="#383E66" />
+                            <path d="M11.3225 4.94751L15.875 9.50001L11.3225 14.0525" stroke="#383E66"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M3.125 9.5H15.7475" stroke="#383E66" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </span>
+            </p>
+    </section>
+    <!-- /BLOG SECTION -->
+
+
+
+    <!-- GALLERY -->
+    <section class="bg-pastel-purple px-8 pb-8 mt-20 md:mt-28 lg:mt-40 lg:pb-20">
+        <div class="text-center text-main-black pt-16 pb-2 md:pb-12 lg:pb-24">
+            <p class="text-xs md:text-lg lg:text-xl xl:text-2xl pb-8 font-normal">Gallery</p>
+
+            <h1 class="text-lg md:text-2xl lg:text-4xl xl:text-5xl tracking-tighter font-semibold">Our photo Gallery
+            </h1>
+        </div>
+
+        <div class="md:px-16 xl:px-28 md:grid md:grid-cols-2 xl:flex justify-center items-center md:gap-2 xl:gap-4">
+
+            <div class="bg-gray-300 rounded-lg mb-8 md:mb-0 h-64 w-full sm:h-56 lg:h-72"></div>
+
+            <div class="bg-teal-300 rounded-lg mb-8 md:mb-0 h-64 w-full sm:h-56 lg:h-72"></div>
+
+            <div class="bg-blue-500 rounded-lg mb-8 md:mb-0 h-64 w-full sm:h-56 lg:h-72"></div>
+
+            <div class="bg-gray-300 rounded-lg mb-8 md:mb-0 h-64 w-full sm:h-56 lg:h-72"></div>
+
+        </div>
+
+        <p
+            class="md:px-16 xl:px-28 text-xs md:text-base lg:text-xl xl:tracking-wide flex pt-2 md:pt-12 xl:pt-16 hover:bold font-semibold">
+            View
+            all
+            <span class="flex-row lg:relative lg:top-1 px-2 hover:opacity-75">
+                <a href="#">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.3225 4.94751L15.875 9.50001L11.3225 14.0525" fill="#383E66" />
+                        <path d="M11.3225 4.94751L15.875 9.50001L11.3225 14.0525" stroke="#383E66" stroke-width="1.5"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3.125 9.5H15.7475" stroke="#383E66" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </span>
+        </p>
+    </section>
+    <!-- /GALLERY -->
+
+
+
+
+    <!-- FOOTER -->
+    <section class="bottom-0 min-w-full mt-20 md:mt-28 lg:mt-40">
+        <footer class="bg-pastel-purple h-40 md:h-56 lg:h-72">
+            <div class="container md:flex md:justify-start pt-8 md:pt-0 md:items-center">
+                <a href="index.html">
+                    <div
+                        class="flex justify-center tracking-tighter xl:tracking-normal md:pl-4 lg:pl-6 xl:pl-12 text-xs lg:text-base xl:text-xl text-main-black">
+                        <p class="md:hidden hover:font-bold font-semibold">
+                            Dorcas Adamu Child Dignity in trying foundation
+                        </p>
+                        <p class="hidden md:flex font-bold">
+                            Dorcas Adamu Child<br />
+                            Dignity in trying foundation
+                        </p>
+                    </div>
+                </a>
+
+                <!-- FOOTER MENU -->
+                <div class="hidden md:flex ml-8 md:mb-4 lg:ml-10">
+                    <ul class="flex justify-start">
+                        <li>
+                            <a href="index.html"
+                                class="block text-xs hover:font-bold tracking-tighter lg:text-base xl:text-xl xl:px-6 md:px-2 lg:px-4 text-main-black font-semibold">Home</a>
+                        </li>
+                        <li>
+                            <a href="donate.html"
+                                class="block text-xs hover:font-bold tracking-tighter lg:text-base xl:text-xl xl:px-6 md:px-2 lg:px-4 text-main-black font-semibold">Donation</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html"
+                                class="block text-xs hover:font-bold tracking-tighter lg:text-base xl:text-xl xl:px-6 md:px-2 lg:px-4 text-main-black font-semibold">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="contact.html"
+                                class="block text-xs hover:font-bold tracking-tighter lg:text-base xl:text-xl xl:px-6 md:px-2 lg:px-4 text-main-black font-semibold">Contact
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="blog.html"
+                                class="block text-xs hover:font-bold tracking-tighter lg:text-base xl:text-xl xl:px-6 md:px-2 lg:px-4 text-main-black font-semibold">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /FOOTER MENU -->
+
+                <!-- SOCIAL MEDIA LINKS -->
+                <div class="md:pt-0 md:ml-5 xl:justify-center xl:ml-10 mt-5 md:mt-0 flex-col">
+                    <div
+                        class="border hidden md:flex md:w-44 md:mt-20 lg:mt-28 md:mb-6 lg:mb-10 lg:w-56 xl:w-60 border-main-black">
+                    </div>
+                    <div class="">
+                        <p
+                            class="flex justify-center md:justify-start md:pb-0 text-xs md:text-sm lg:text-base xl:text-lg object-center font-bold text-main-black">
+                            Connect with us
+                        </p>
+                    </div>
+                    <div class="flex justify-center lg:justify-start mt-5 lg:mt-8 md:0">
+                        <ul class="flex md:pt-">
+                            <li class="hover:opacity-75">
+                                <a href=""><svg lg:width="42" width="32" lg:height="42" height="32" viewBox="0 0 48 48"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="24" cy="24" r="24" fill="#FAF5E2" />
+                                        <path
+                                            d="M20.7377 37.3337V24.8209H17.334V20.3157H20.7377V16.4677C20.7377 13.4438 22.7483 10.667 27.381 10.667C29.2568 10.667 30.6438 10.8418 30.6438 10.8418L30.5345 15.0489C30.5345 15.0489 29.12 15.0355 27.5764 15.0355C25.9057 15.0355 25.638 15.7839 25.638 17.0261V20.3157H30.6673L30.4485 24.8209H25.638V37.3337H20.7377Z"
+                                            fill="#2A3F54" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="hover:opacity-75 mr-2 ml-4">
+                                <a href="#"><svg lg:width="42" width="32" lg:height="42" height="32" viewBox="0 0 49 48"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="24.334" cy="24" r="24" fill="#FAF5E2" />
+                                        <path
+                                            d="M20.3693 32.0012C28.42 32.0012 32.824 25.3306 32.824 19.5559C32.824 19.3692 32.824 19.1799 32.816 18.9932C33.6734 18.3726 34.4134 17.6041 35.0013 16.7239C34.2004 17.0771 33.3517 17.3098 32.4826 17.4146C33.398 16.8674 34.0836 16.0065 34.412 14.9919C33.552 15.5014 32.6107 15.8591 31.6293 16.0492C30.9695 15.3466 30.0965 14.8811 29.1454 14.7249C28.1943 14.5687 27.2183 14.7305 26.3684 15.1852C25.5186 15.6399 24.8424 16.3621 24.4446 17.24C24.0468 18.1179 23.9495 19.1025 24.168 20.0412C22.4276 19.954 20.7251 19.5019 19.1707 18.7142C17.6163 17.9266 16.2449 16.821 15.1453 15.4692C14.5871 16.4334 14.4167 17.5738 14.6688 18.6589C14.9209 19.7441 15.5766 20.6926 16.5026 21.3119C15.8087 21.2883 15.13 21.102 14.5213 20.7679V20.8279C14.5225 21.8379 14.8724 22.8165 15.5118 23.5983C16.1512 24.38 17.041 24.9171 18.0306 25.1186C17.655 25.2221 17.2669 25.2737 16.8773 25.2719C16.6026 25.2727 16.3285 25.2473 16.0586 25.1959C16.3384 26.0653 16.883 26.8255 17.6163 27.3699C18.3496 27.9143 19.2348 28.2157 20.148 28.2319C18.5967 29.4503 16.6805 30.1111 14.708 30.1079C14.3604 30.1094 14.0131 30.0893 13.668 30.0479C15.67 31.3243 17.995 32.002 20.3693 32.0012V32.0012Z"
+                                            fill="#2A3F54" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="hover:opacity-75 mx-2">
+                                <a href="#"><svg lg:width="42" width="32" lg:height="42" height="32" viewBox="0 0 49 48"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="24.666" cy="24" r="24" fill="#FAF5E2" />
+                                        <path
+                                            d="M33.7923 18.2662C30.5923 13.3328 24.059 11.8662 18.9923 14.9328C14.059 17.9995 12.459 24.6662 15.659 29.5995L15.9256 29.9995L14.859 33.9995L18.859 32.9328L19.259 33.1995C20.9923 34.1328 22.859 34.6662 24.7256 34.6662C26.7256 34.6662 28.7256 34.1328 30.459 33.0662C35.3923 29.8662 36.859 23.3328 33.7923 18.2662V18.2662ZM30.9923 28.5328C30.459 29.3328 29.7923 29.8662 28.859 29.9995C28.3256 29.9995 27.659 30.2662 24.9923 29.1995C22.7256 28.1328 20.859 26.3995 19.5256 24.3995C18.7256 23.4662 18.3256 22.2662 18.1923 21.0662C18.1923 19.9995 18.5923 19.0662 19.259 18.3995C19.5256 18.1328 19.7923 17.9995 20.059 17.9995H20.7256C20.9923 17.9995 21.259 17.9995 21.3923 18.5328C21.659 19.1995 22.3256 20.7995 22.3256 20.9328C22.459 21.0662 22.459 21.3328 22.3256 21.4662C22.459 21.7328 22.3256 21.9995 22.1923 22.1328C22.059 22.2662 21.9256 22.5328 21.7923 22.6662C21.5256 22.7995 21.3923 23.0662 21.5256 23.3328C22.059 24.1328 22.7256 24.9328 23.3923 25.5995C24.1923 26.2662 24.9923 26.7995 25.9256 27.1995C26.1923 27.3328 26.459 27.3328 26.5923 27.0662C26.7256 26.7995 27.3923 26.1328 27.659 25.8662C27.9256 25.5995 28.059 25.5995 28.3256 25.7328L30.459 26.7995C30.7256 26.9328 30.9923 27.0662 31.1256 27.1995C31.259 27.5995 31.259 28.1328 30.9923 28.5328V28.5328Z"
+                                            fill="#2A3F54" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="hover:opacity-75 mx-2">
+                                <a href="#"><svg lg:width="42" width="32" lg:height="42" height="32" viewBox="0 0 48 48"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="24" cy="24" r="24" fill="#FAF5E2" />
+                                        <path
+                                            d="M35.9333 19.0987C35.9199 18.0888 35.7308 17.089 35.3747 16.144C35.0658 15.3469 34.5941 14.6229 33.9896 14.0184C33.3851 13.414 32.6611 12.9422 31.864 12.6333C30.9311 12.2831 29.9456 12.0938 28.9493 12.0733C27.6667 12.016 27.26 12 24.004 12C20.748 12 20.3307 12 19.0573 12.0733C18.0615 12.0939 17.0765 12.2833 16.144 12.6333C15.3467 12.942 14.6227 13.4137 14.0182 14.0182C13.4137 14.6227 12.942 15.3467 12.6333 16.144C12.2824 17.0762 12.0935 18.0615 12.0747 19.0573C12.0173 20.3413 12 20.748 12 24.004C12 27.26 12 27.676 12.0747 28.9507C12.0947 29.948 12.2827 30.932 12.6333 31.8667C12.9425 32.6637 13.4145 33.3874 14.0192 33.9917C14.624 34.596 15.3481 35.0674 16.1453 35.376C17.0752 35.7403 18.0605 35.9432 19.0587 35.976C20.3427 36.0333 20.7493 36.0507 24.0053 36.0507C27.2613 36.0507 27.6787 36.0507 28.952 35.976C29.9482 35.9564 30.9338 35.7675 31.8667 35.4173C32.6636 35.1081 33.3873 34.6362 33.9918 34.0318C34.5962 33.4273 35.0681 32.7036 35.3773 31.9067C35.728 30.9733 35.916 29.9893 35.936 28.9907C35.9933 27.708 36.0107 27.3013 36.0107 24.044C36.008 20.788 36.008 20.3747 35.9333 19.0987V19.0987ZM23.996 30.1613C20.5907 30.1613 17.832 27.4027 17.832 23.9973C17.832 20.592 20.5907 17.8333 23.996 17.8333C25.6308 17.8333 27.1986 18.4828 28.3546 19.6387C29.5106 20.7947 30.16 22.3625 30.16 23.9973C30.16 25.6321 29.5106 27.2 28.3546 28.3559C27.1986 29.5119 25.6308 30.1613 23.996 30.1613V30.1613ZM30.4053 19.0427C30.2165 19.0428 30.0295 19.0058 29.8551 18.9336C29.6806 18.8614 29.5221 18.7556 29.3886 18.6221C29.2551 18.4886 29.1492 18.33 29.0771 18.1556C29.0049 17.9811 28.9678 17.7941 28.968 17.6053C28.968 17.4167 29.0052 17.2298 29.0774 17.0555C29.1496 16.8812 29.2554 16.7229 29.3888 16.5895C29.5222 16.456 29.6806 16.3502 29.8549 16.278C30.0292 16.2058 30.216 16.1687 30.4047 16.1687C30.5933 16.1687 30.7802 16.2058 30.9545 16.278C31.1288 16.3502 31.2871 16.456 31.4205 16.5895C31.554 16.7229 31.6598 16.8812 31.732 17.0555C31.8042 17.2298 31.8413 17.4167 31.8413 17.6053C31.8413 18.4 31.1987 19.0427 30.4053 19.0427Z"
+                                            fill="#2A3F54" />
+                                        <path
+                                            d="M23.9962 28.0012C26.2075 28.0012 28.0002 26.2085 28.0002 23.9972C28.0002 21.7858 26.2075 19.9932 23.9962 19.9932C21.7848 19.9932 19.9922 21.7858 19.9922 23.9972C19.9922 26.2085 21.7848 28.0012 23.9962 28.0012Z"
+                                            fill="#2A3F54" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /SOCIAL MEDIA LINKS -->
+            </div>
+        </footer>
+    </section>
+    <!-- /FOOTER -->
+
+    <script src="js/app.js"></script>
 </body>
+
 </html>
